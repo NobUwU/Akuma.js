@@ -10,9 +10,13 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint src/** --fix",
-    "precommit": "npm run lint",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "precommit": "echo 'pre-commit running linter...' && exit 0"
   },
+  "pre-commit": [
+    "precommit",
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NobUwU/akuma.git"
@@ -31,6 +35,7 @@
     "@typescript-eslint/eslint-plugin": "^4.13.0",
     "@typescript-eslint/parser": "^4.13.0",
     "eslint": "^7.17.0",
+    "pre-commit": "^1.2.2",
     "typescript": "^3.9.2"
   },
   "dependencies": {
