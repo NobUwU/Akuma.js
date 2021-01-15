@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "lint": "eslint src/** --fix",
+    "lint": "eslint src/**",
+    "lint:fix": "eslint src/** --fix",
     "prepack": "npm run build",
     "precommit": "echo 'pre-commit running linter...' && exit 0"
   },
