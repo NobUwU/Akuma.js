@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "lib",
+    "baseUrl": ".",
+    "lib": ["es2020", "dom"],
+    "strictNullChecks": true,
+    "rootDir": "src",
+    "moduleResolution": "node"
+  },
+  "include": [
+    "src/**/*",
+    "tsconfig.json"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib"
+  ],
+}
