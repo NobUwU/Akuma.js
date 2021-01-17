@@ -1,17 +1,21 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "declaration": true,
+    "esModuleInterop": true,
+    "declaration": false,
     "outDir": "lib",
     "baseUrl": ".",
+    "target": "es2020",
     "lib": ["es2020", "dom"],
     "strictNullChecks": true,
     "rootDir": "src",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "removeComments": false
   },
   "include": [
-    "src/**/*",
-    "tsconfig.json"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
