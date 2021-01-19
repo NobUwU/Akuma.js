@@ -1,6 +1,10 @@
 /* eslint-disable camelcase */
-import { Constants } from '../../utils'
-import { IdentifyBase } from '../../@types'
+import {
+  Constants,
+} from '../../utils'
+import {
+  IdentifyBase,
+} from '../../@types'
 const Identify = (token: string, status: "online" | "idle" | "invisible" | "dnd" | "offline", intents: number): IdentifyBase => {
   return {
     op: Constants.GATEWAY_OP_CODES.IDENTIFY,

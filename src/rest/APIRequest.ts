@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Axios from 'axios'
-import { Error } from '../errors'
+import {
+  Error,
+} from '../errors'
 import {
   APIRequestClassInterface,
   APIRequestOptionsInterface,
@@ -40,7 +43,6 @@ class APIRequest implements APIRequestClassInterface {
       }
     }
   }
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public create(): Promise<JSON | any> {
     return new Promise((resolve, reject) => {
       if (this.malformedRequest) throw new Error(`Malformed_Request`)
@@ -63,8 +65,8 @@ class APIRequest implements APIRequestClassInterface {
   }
 }
 // Function to create request with lessish code
-function createRequest(options: APIRequestOptionsInterface): APIRequestClassInterface {
-  return new APIRequest(options)
+function createRequest(options: APIRequestOptionsInterface): Promise<any> {
+  return new APIRequest(options).create()
 }
 export {
   APIRequest,

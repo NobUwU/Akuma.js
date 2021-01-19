@@ -3,7 +3,7 @@ export interface APIRequestInterface {
 }
 export interface APIRequestClassInterface {
   /**
-   * 
+   * Create the request and get JSON response
    */
   create(): Promise<JSON>
   /**
@@ -22,7 +22,7 @@ export interface APIRequestOptionsInterface {
    */
   path: string
   /** 
-   * CLient token, if no token given authorization header will not be sent
+   * Client token, if no token given authorization header will not be sent
    */
   token?: string
   /**

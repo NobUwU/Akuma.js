@@ -1,4 +1,16 @@
+/* eslint-disable camelcase */
 const Constants = {
+
+  clientOptionsDefault: {
+    restRequestTimeout: 20000,
+    restRetryLimit: 1,
+    ws: {
+      large_threshold: 50,
+      compress: false,
+    },
+  },
+
+  // Discord Related Constants
   GATEWAY_VERSION: 6,
   REST_VERSION: 7,
 
